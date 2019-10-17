@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>simple-vue-template</title>
+</head>
+<body>
+    <div id="app">
+        <div>{{message}}</div>
+        <div>count: {{count}} <button @click="addCount">Add</button></div>
+    </div>
+    <script type="text/javascript" src="assets/libs/js/vue.min.js"></script>
+    <script type="text/javascript" src="assets/libs/js/axios.js"></script>
+    <script type="text/javascript" src="assets/libs/js/qs.js"></script>
+    <script type="text/javascript" src="assets/libs/js/moment.js"></script>
+    <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue',
+                count: 0,
+            },
+            methods: {
+                addCount(){
+                    this.count += 1;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
